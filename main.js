@@ -1,3 +1,4 @@
+
 function verificar_delimitadores(expresion) {
     const stack = [];
     const delimitadores = {
@@ -17,4 +18,11 @@ function verificar_delimitadores(expresion) {
         }
     }
     return stack.length === 0;
+}
+var expresion = prompt("Ingrese una expresión con delimitadores: ");
+if (verificar_delimitadores(expresion)) {
+    console.log("La expresión tiene los delimitadores correctamente balanceados.");
+}
+else {
+    console.log("La expresión NO tiene los delimitadores correctamente balanceados.");
 }
